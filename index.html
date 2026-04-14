@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Миша Трунов — Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<div id="enter-screen">
+  <canvas id="matrix-canvas"></canvas>
+  <div class="enter-content">
+    <div class="e-name">Миша Трунов · Full Stack Developer</div>
+    <button id="enter-btn">E N T E R</button>
+  </div>
+</div>
+
+<div id="loading-screen">
+  <div class="loading-text">Инициализация · · ·</div>
+  <div class="loading-bar"><div class="loading-bar-fill" id="lbar"></div></div>
+</div>
+
+<div id="main-site" style="opacity:0;transition:opacity 1s ease;">
+
+  <canvas id="stars-canvas"></canvas>
+  <div class="cosmic-bg"></div>
+
+  <div class="side-label" id="side-lbl">HOME</div>
+
+  <nav>
+    <button id="mute-btn" class="mute-btn" title="Toggle Music">♫</button>
+    <button id="menu-btn" class="menu-btn" title="Menu">☰</button>
+    <div class="nav-links">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Стек</a>
+      <a href="#work">Подход</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакт</a>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Стек</a>
+      <a href="#work">Подход</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакт</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span></span>
+        Доступен для проектов · 18 лет
+      </div>
+      <div class="hero-name">DEFAULT</div>
+      <div class="hero-role">Full Stack Developer</div>
+      <p class="hero-desc">
+        Разрабатываю веб-платформы и информационные системы.<br>
+        Backend, базы данных, современные интерфейсы.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-p">Посмотреть проекты</a>
+        <a href="#contact" class="btn-o">Связаться</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="about">
+    <div class="reveal">
+      <div class="sec-label">Обо мне</div>
+      <div class="sec-title">Кто я такой</div>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>Привет! Меня зовут Миша, мне 18 лет. Мой псеводним Winnie/D34ult. Я Full Stack разработчик, увлечённый созданием веб-платформ и информационных систем.</p>
+        <p>Работаю с современным стеком — от проектирования баз данных в PostgreSQL до REST API на FastAPI и интерактивных интерфейсов на JavaScript.</p>
+        <p>Люблю решать сложные задачи: реализовывал систему бронирования мест с защитой от двойных продаж, JWT-аутентификацию с ролевой моделью и автоматическую генерацию PDF-билетов.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Проект в портфолио</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">9</div>
+          <div class="stat-label">Таблиц в БД</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">8</div>
+          <div class="stat-label">Страниц фронтенда</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">API эндпоинтов</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="skills">
+    <div class="reveal">
+      <div class="sec-label">Технологии</div>
+      <div class="sec-title">Мой стек</div>
+    </div>
+    <div class="skills-grid reveal">
+      <div>
+        <div class="skill-cat">Backend</div>
+        <div class="skills-row">
+          <div class="skill-tag"><div class="skill-dot" style="background:#3776AB"></div>Python</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#009688"></div>FastAPI</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#68A063"></div>Node.js</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#512BD4"></div>C#</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#6147c2"></div>Rest</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#6079e9"></div>Uvicorn</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#0ba6e4"></div>Pydantic</div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-cat">База данных</div>
+        <div class="skills-row">
+          <div class="skill-tag"><div class="skill-dot" style="background:#336791"></div>PostgreSQL</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#4479A1"></div>MySQL</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#47A248"></div>MongoDB</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#D71F00"></div>SQLAlchemy</div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-cat">Frontend</div>
+        <div class="skills-row">
+          <div class="skill-tag"><div class="skill-dot" style="background:#E34F26"></div>HTML</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#1572B6"></div>CSS</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#F7DF1E"></div>JavaScript</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#42B883"></div>Vue.js</div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-cat">DevOps & Tools</div>
+        <div class="skills-row">
+          <div class="skill-tag"><div class="skill-dot" style="background:#2496ED"></div>Docker</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#4EAA25"></div>Bash</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#FF6C37"></div>Linux</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#df1010"></div>CI/CD</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#e0d20e"></div>VS Code</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#dd0cf0"></div>Git</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#5f5277"></div>JWT</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#4e1028"></div>ClaudCode</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#b1d414"></div>KiloCode</div>
+          <div class="skill-tag"><div class="skill-dot" style="background:#41d648"></div>Figma</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="work">
+    <div class="reveal">
+      <div class="sec-label">Как я работаю</div>
+      <div class="sec-title">Work Approach</div>
+    </div>
+    <div class="work-list reveal">
+      <div class="work-item active" data-idx="0">
+        <div class="work-num">01</div>
+        <div class="work-title-wrap">
+          <div class="work-title">Чистая архитектура</div>
+          <div class="work-desc">
+            Проектирую системы с нуля — от схемы БД до API-контрактов. Каждое решение обосновано.
+            <div class="work-tags">
+              <span class="work-tag">PostgreSQL</span>
+              <span class="work-tag">REST API</span>
+              <span class="work-tag">FastAPI</span>
+              <span class="work-tag">JWT</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-arrow">+</div>
+      </div>
+      <div class="work-item" data-idx="1">
+        <div class="work-num">02</div>
+        <div class="work-title-wrap">
+          <div class="work-title">Full Stack</div>
+          <div class="work-desc">
+            От сервера до пикселя — реализую полный цикл разработки без передачи задач.
+            <div class="work-tags">
+              <span class="work-tag">Python</span>
+              <span class="work-tag">JavaScript</span>
+              <span class="work-tag">Vue.js</span>
+              <span class="work-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-arrow">+</div>
+      </div>
+      <div class="work-item" data-idx="2">
+        <div class="work-num">03</div>
+        <div class="work-title-wrap">
+          <div class="work-title">Безопасность</div>
+          <div class="work-desc">
+            Ролевая модель, bcrypt, защита от двойных продаж, валидация на каждом уровне.
+            <div class="work-tags">
+              <span class="work-tag">JWT</span>
+              <span class="work-tag">bcrypt</span>
+              <span class="work-tag">Role-based access</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-arrow">+</div>
+      </div>
+      <div class="work-item" data-idx="3">
+        <div class="work-num">04</div>
+        <div class="work-title-wrap">
+          <div class="work-title">Автоматизация</div>
+          <div class="work-desc">
+            PDF-генерация, почтовые уведомления, cron-задачи — автоматизирую всё что можно автоматизировать.
+            <div class="work-tags">
+              <span class="work-tag">PDF</span>
+              <span class="work-tag">SMTP</span>
+              <span class="work-tag">Bash scripts</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-arrow">+</div>
+      </div>
+      <div class="work-item" data-idx="4">
+        <div class="work-num">05</div>
+        <div class="work-title-wrap">
+          <div class="work-title">Запуск & Поддержка</div>
+          <div class="work-desc">
+            Docker-контейнеризация, деплой, документация — проект живёт и после сдачи.
+            <div class="work-tags">
+              <span class="work-tag">Docker</span>
+              <span class="work-tag">Linux</span>
+              <span class="work-tag">Nginx</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-arrow">+</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="projects">
+    <div class="reveal">
+      <div class="sec-label">Проекты</div>
+      <div class="sec-title">Что я создал</div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-visual">
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+        <div class="ring ring3"></div>
+        <div class="proj-logo-text">
+          TicketFlow
+          <span class="proj-logo-sub">Веб-платформа продажи билетов</span>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="proj-badge">Full Stack · 2026</div>
+        <h3>TicketFlow</h3>
+        <p>Платформа для автоматизации продажи билетов с интерактивной схемой зала, JWT-аутентификацией, тремя уровнями доступа и генерацией PDF-билетов.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">FastAPI</span>
+          <span class="proj-tag">PostgreSQL</span>
+          <span class="proj-tag">JavaScript</span>
+          <span class="proj-tag">JWT</span>
+          <span class="proj-tag">bcrypt</span>
+          <span class="proj-tag">REST API</span>
+          <span class="proj-tag">PDF</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/W1nni3XD/Web-based-coursework-platform-Ticket-Flow" target="_blank" class="proj-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link out">Подробнее →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <div class="sec-label">Контакт</div>
+      <div class="sec-title">Давай создадим<br>что-то крутое.</div>
+      <p>Открыт для новых проектов, стажировок и интересных задач. Напиши — отвечу быстро!</p>
+      <a href="mailto:dragunovmisha6@gmail.com" class="contact-email">dragunovmisha6@gmail.com</a>
+      <div class="social-row">
+        <a href="https://github.com/W1nni3XD" target="_blank" class="soc" title="GitHub">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://t.me/CornyFy" target="_blank" class="soc" title="Telegram">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="https://vk.com/fnjkexd" target="_blank" class="soc" title="ВКонтакте">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.587-1.496c.598-.19 1.365 1.26 2.179 1.815.615.42 1.082.328 1.082.328l2.172-.03s1.135-.07.597-1.001c-.044-.073-.313-.665-1.612-1.88-1.362-1.271-1.179-1.066.46-3.267.998-1.33 1.397-2.141 1.271-2.489-.12-.332-.854-.244-.854-.244l-2.444.015s-.181-.025-.315.056c-.132.08-.216.267-.216.267s-.387 1.028-.903 1.903c-1.088 1.85-1.524 1.948-1.703 1.834-.414-.267-.31-1.072-.31-1.644 0-1.786.27-2.53-.526-2.72-.265-.064-.46-.106-1.137-.113-.869-.009-1.604.003-2.02.207-.277.135-.49.437-.36.454.16.022.523.098.716.36.248.34.24 1.103.24 1.103s.142 2.103-.332 2.362c-.326.176-.773-.183-1.733-1.826-.491-.85-.862-1.79-.862-1.79s-.071-.174-.201-.267c-.157-.114-.376-.15-.376-.15l-2.322.015s-.348.01-.476.161c-.114.134-.009.412-.009.412s1.818 4.26 3.878 6.409c1.889 1.973 4.034 1.842 4.034 1.842h.972z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo">M.T.</div>
+    <span>© 2026 Миша Трунов · Full Stack Developer</span>
+    <span class="foot-tech">HTML · CSS · JS</span>
+  </footer>
+
+</div>
+
+</div>
+
+<audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const cur = document.getElementById('cur');
+const ring = document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function animR(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animR);})();
+
+(function(){
+  const canvas = document.getElementById('matrix-canvas');
+  const ctx = canvas.getContext('2d');
+  let W,H,cols,drops;
+  function resize(){
+    W=canvas.width=window.innerWidth;
+    H=canvas.height=window.innerHeight;
+    cols=Math.floor(W/20);
+    drops=Array(cols).fill(1);
+  }
+  resize();
+  window.addEventListener('resize',resize);
+  function draw(){
+    ctx.fillStyle='rgba(6,6,15,.05)';
+    ctx.fillRect(0,0,W,H);
+    ctx.font='14px monospace';
+    for(let i=0;i<drops.length;i++){
+      const char=Math.random()>.5?'1':'0';
+      ctx.fillStyle=Math.random()>.92?'#a855f7':'rgba(124,58,237,.35)';
+      ctx.fillText(char,i*20,drops[i]*20);
+      if(drops[i]*20>H&&Math.random()>.975)drops[i]=0;
+      drops[i]++;
+    }
+  }
+  setInterval(draw,50);
+})();
+
+document.getElementById('enter-btn').addEventListener('click',function(){
+  const es=document.getElementById('enter-screen');
+  const ls=document.getElementById('loading-screen');
+  es.classList.add('hidden');
+  setTimeout(()=>{
+    ls.classList.add('active');
+    const bar=document.getElementById('lbar');
+    setTimeout(()=>{bar.style.width='100%';},50);
+    setTimeout(()=>{
+      ls.classList.add('fade-out');
+      const site=document.getElementById('main-site');
+      site.style.opacity='1';
+      setTimeout(()=>{ls.classList.remove('active');},800);
+      initStars();
+      initReveal();
+      document.getElementById('bg-music').play().catch(()=>{});
+    },1800);
+  },800);
+});
+
+document.getElementById('mute-btn').addEventListener('click',function(){
+  const audio=document.getElementById('bg-music');
+  if(audio.paused){
+    audio.play();
+    this.textContent='♫';
+    this.classList.remove('muted');
+  }else{
+    audio.pause();
+    this.textContent='✕';
+    this.classList.add('muted');
+  }
+});
+
+document.getElementById('menu-btn').addEventListener('click',function(){
+  document.getElementById('mobile-menu').classList.toggle('active');
+  this.textContent=document.getElementById('mobile-menu').classList.contains('active')?'✕':'☰';
+});
+
+document.querySelectorAll('.mobile-menu a').forEach(link=>{
+  link.addEventListener('click',()=>{
+    document.getElementById('mobile-menu').classList.remove('active');
+    document.getElementById('menu-btn').textContent='☰';
+  });
+});
+
+function initStars(){
+  const canvas=document.getElementById('stars-canvas');
+  const ctx=canvas.getContext('2d');
+  let W,H;
+  const stars=[];
+  function resize(){
+    W=canvas.width=window.innerWidth;
+    H=canvas.height=window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize',resize);
+  for(let i=0;i<220;i++){
+    stars.push({
+      x:Math.random()*window.innerWidth,
+      y:Math.random()*window.innerHeight,
+      r:Math.random()*1.4+.3,
+      o:Math.random()*.7+.1,
+      s:Math.random()*.3+.05,
+      dy:Math.random()*.15+.05,
+      twinkle:Math.random()*Math.PI*2
+    });
+  }
+  const shoots=[];
+  function addShoot(){
+    shoots.push({x:Math.random()*W,y:Math.random()*H*.5,len:Math.random()*80+60,speed:Math.random()*6+4,alpha:1,angle:Math.PI/5});
+    setTimeout(addShoot,Math.random()*4000+2000);
+  }
+  setTimeout(addShoot,1000);
+
+  let t=0;
+  (function loop(){
+    ctx.clearRect(0,0,W,H);
+    t+=0.01;
+    for(const s of stars){
+      s.twinkle+=s.s;
+      const alpha=s.o*(0.6+0.4*Math.sin(s.twinkle));
+      ctx.beginPath();
+      ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,255,255,${alpha})`;
+      ctx.fill();
+      s.y+=s.dy*0.1;
+      if(s.y>H)s.y=0;
+    }
+    for(let i=shoots.length-1;i>=0;i--){
+      const sh=shoots[i];
+      ctx.save();
+      ctx.globalAlpha=sh.alpha;
+      const grd=ctx.createLinearGradient(sh.x,sh.y,sh.x-Math.cos(sh.angle)*sh.len,sh.y-Math.sin(sh.angle)*sh.len);
+      grd.addColorStop(0,'rgba(255,255,255,1)');
+      grd.addColorStop(1,'rgba(168,85,247,0)');
+      ctx.strokeStyle=grd;
+      ctx.lineWidth=1.5;
+      ctx.beginPath();
+      ctx.moveTo(sh.x,sh.y);
+      ctx.lineTo(sh.x-Math.cos(sh.angle)*sh.len,sh.y-Math.sin(sh.angle)*sh.len);
+      ctx.stroke();
+      ctx.restore();
+      sh.x+=Math.cos(sh.angle)*sh.speed;
+      sh.y+=Math.sin(sh.angle)*sh.speed;
+      sh.alpha-=0.012;
+      if(sh.alpha<=0)shoots.splice(i,1);
+    }
+    requestAnimationFrame(loop);
+  })();
+}
+
+function initAudio(){
+  const audio = document.getElementById('bg-music');
+  document.getElementById('main-site').addEventListener('click', function() {
+    audio.play().catch(() => {});
+  }, {once:true});
+}
+
+function initReveal(){
+  const els=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+  },{threshold:.08});
+  els.forEach(r=>obs.observe(r));
+}
+
+document.querySelectorAll('.work-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    document.querySelectorAll('.work-item').forEach(i=>i.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+
+const sections={hero:'HOME',about:'ABOUT',skills:'STACK',work:'WORK',projects:'PROJECTS',contact:'CONTACT'};
+const sideLbl=document.getElementById('side-lbl');
+if(sideLbl){
+  const obs2=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const id=e.target.id||'hero';
+        sideLbl.textContent=sections[id]||'HOME';
+      }
+    });
+  },{threshold:.4});
+  document.querySelectorAll('section').forEach(s=>obs2.observe(s));
+}
+</script>
+</body>
+</html>
