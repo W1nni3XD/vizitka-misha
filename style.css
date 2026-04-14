@@ -425,6 +425,8 @@ footer{
 }
 
 @media(max-width:900px){
+  body{cursor:auto;}
+  #cur,#cur-ring{display:none;}
   nav{padding:16px 24px;}
   .nav-links{display:none;}
   .menu-btn{display:flex;}
